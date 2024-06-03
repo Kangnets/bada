@@ -1,38 +1,274 @@
+
+* {
+  -webkit-tap-highlight-color:rgba(255,255,255,0);
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  touch-action: pan-y; 
+}
+
+body, html, .App, .main .main_content{
+  overscroll-behavior: none  !important; 
+}
+
+a {
+  text-decoration: none;
+}
+
+.main {
+  background-color: #ffffff;
+  font-family: 'Pretendard';
+  letter-spacing: -0.08rem;
+  max-width: 840px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch; /* 異붽� */
+}
+
+.main_b {
+  background: #1ABDE8;
+  font-family: 'Pretendard';
+  letter-spacing: -0.08rem;
+  max-width: 840px;
+  height: 100%;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch; /* 異붽� */
+}
+
+
+
 .App {
   text-align: center;
+  background-color: #ffffff;
+  overflow-y: auto; /* �ㅽ겕濡ㅼ씠 蹂댁씠�꾨줉 �ㅼ젙 */
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@media screen and (min-width: 840px) {
+  .main_content {
+    position: relative;
+    max-width: 840px;
+    min-height: 100vh;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  }
+  
+  .main_content:before {
+    content: " ";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid;
+    border-color: #82888e;
+  }
+
+  .main_content:after {
+    content: " ";
+    position: absolute;
+    right: -1px;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid;
+    border-color: #d1d6db;
+  }
+
+  div {
+    display: block;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+
+
+.under_line{
+  width: 344px;
+  height: 2px;
+
+  background: #EEEEEF;
+}
+
+.input_content ::placeholder{
+  color: #888;
+  font-family: "Pretendard Variable";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.5  
+}
+
+.input_content {
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+input{
+  outline: none;
+  border : none; 
+}
+
+.login_title_blue{
+  color: #1ABDE8;
+  font-family: "Pretendard Variable";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.8px;
+}
+
+.login_title{
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.8px;
+}
+
+.main_title_big{
+  color: #1ABDE8;
+  font-family: "Pretendard Variable";
+  font-size: 27px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.main_title_small{
+  color: rgba(26, 189, 232, 0.50);
+  text-align: right;
+  font-family: "Pretendard Variable";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sub_title{
+  color: #000;
+  font-family: "Pretendard Variable";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.cta_link {
+  margin-right: 45.5%;
+  color: #1ABDE8;
+  width: 330px;
+  height: 2.6%;
+  font-family: 'Pretendard';
+  font-weight: 700;
+  font-size: 40px;
+  text-align: left;
+  letter-spacing: -0.408px;
+  -webkit-text-stroke: 0.5px #FFFFFF;
+  -moz-text-stroke: 0.5px #FFFFFF;
+  transition: all 0.3s ease;
+}
+
+.cta_link:hover {
+  -webkit-text-fill-color: #FFFFFF;
+  -moz-text-fill-color: #FFFFFF;
+  -webkit-text-stroke: none;
+  -moz-text-stroke: none;
+}
+
+.white_button{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 344px;
+  padding: 14px ;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 10px;
+   
+  border-radius: 12px;
+  background: #FFF;
+
+  color: #1ABDE8;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: "Pretendard Variable";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 100% */
+  letter-spacing: -0.88px;
 }
 
-.App-link {
-  color: #61dafb;
+.blue_button{
+  display: flex;
+  width: 344px;
+  padding: 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 12px;
+  background: #1ABDE8;
+
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: "Pretendard Variable";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px; /* 100% */
+  letter-spacing: -0.88px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start_title{
+  color: #FFF;
+  font-family: "Pretendard Variable";
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.start_sub_title{
+  color: rgba(255, 255, 255, 0.50);
+  text-align: right;
+  font-family: "Pretendard Variable";
+  font-size: 16.5px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.middle_compo{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom_compo{
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -95%);
 }
