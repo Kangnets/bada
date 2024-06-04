@@ -272,3 +272,13 @@ input{
   left: 50%;
   transform: translate(-50%, -95%);
 }
+
+.chat_font{
+  color: #fff;
+  text-align: center;
+  font-family: "Pretendard Variable";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
